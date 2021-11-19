@@ -1,0 +1,1 @@
+C:\Users\Administrator\.platformio\packages\toolchain-xtensa\bin\xtensa-lx106-elf-g++.exe  -fno-rtti -std=gnu++17 -fno-exceptions -Os -mlongcalls -mtext-section-literals -falign-functions=4 -U__STRICT_ANSI__ -D_GNU_SOURCE -ffunction-sections -fdata-sections -Wall -Werror=return-type -free -fipa-pta -g   CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj  -o Z_DUMMY_TARGET 
