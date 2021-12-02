@@ -83,10 +83,10 @@ void sendIp() {
     lastTimeSendIp = now;
     Udp.beginPacket("192.168.43.255", 18888);
 
-    String data =  "EspRcRx" + String(ESP.getChipId())+",ADC:"+String(ESP.getVcc());
+    String data = "EspRcRx" + String(ESP.getChipId()) + ",ADC:" + String(ESP.getVcc());
     Udp.write(data.c_str());
     Udp.endPacket();
-    Serial.println("sendIp");
+//    Serial.println("sendIp");
 }
 
 void executeCmd() {
@@ -106,14 +106,18 @@ void executeCmd() {
                 servo.attach(i);
                 servo.write(newGpioData[i][1]);
                 servoList[i] = servo;
-            } else {  // PWM直驱
+            } else if (newGpioData[i][0] == 1) {  // PWM直驱
                 analogWrite(i, newGpioData[i][1] * 6);// 1024
+            } else {
+                digitalWrite(newGpioData[i][1],LOW);
             }
         } else { // 不需要转变PWM模式
             if (newGpioData[i][0] == 0) { // 舵机
                 servoList[i].write(newGpioData[i][1]);
-            } else {  // PWM直驱
+            } else if (newGpioData[i][0] == 1) {  // PWM直驱
                 analogWrite(i, newGpioData[i][1] * 6);// 1024
+            } else {
+                digitalWrite(newGpioData[i][1],LOW);
             }
         }
         oldGpioData[i][0] = newGpioData[i][0];
@@ -127,8 +131,8 @@ void loop() {
     int packetSize = Udp.parsePacket(); //获取当前队首数据包长度
     if (packetSize)                     // 有数据可用
     {
-        Serial.printf("Received %d bytes from %s, port %d\n", packetSize, Udp.remoteIP().toString().c_str(),
-                      Udp.remotePort());
+//        Serial.printf("Received %d bytes from %s, port %d\n", packetSize, Udp.remoteIP().toString().c_str(),
+//                      Udp.remotePort());
         if (Udp.remoteIP().toString() == WiFi.localIP().toString()) {
             // 自己发送放入广播 不处理
             return;
@@ -143,9 +147,9 @@ void loop() {
                     count++;
                 }
             }
-            Serial.printf("---count  %s\n", String(count).c_str());
+//            Serial.printf("---count  %s\n", String(count).c_str());
             String data = String(incomingPacket);
-            Serial.printf("UDP packet contents: %s\n", incomingPacket);
+//            Serial.printf("UDP packet contents: %s\n", incomingPacket);
             if (data.indexOf("gpio") != -1) {
                 DynamicJsonDocument doc(200);
                 deserializeJson(doc, data);
