@@ -109,6 +109,9 @@ void executeCmd() {
             } else if (newGpioData[i][0] == 1) {  // PWM直驱
                 analogWrite(i, newGpioData[i][1] * 6);// 1024
             } else {
+                if(&servoList[i] != nullptr){
+                    servoList[i].detach();
+                }
                 digitalWrite(newGpioData[i][1],LOW);
             }
         } else { // 不需要转变PWM模式
@@ -117,6 +120,9 @@ void executeCmd() {
             } else if (newGpioData[i][0] == 1) {  // PWM直驱
                 analogWrite(i, newGpioData[i][1] * 6);// 1024
             } else {
+                if(&servoList[i] != nullptr){
+                    servoList[i].detach();
+                }
                 digitalWrite(newGpioData[i][1],LOW);
             }
         }
@@ -149,7 +155,7 @@ void loop() {
             }
 //            Serial.printf("---count  %s\n", String(count).c_str());
             String data = String(incomingPacket);
-//            Serial.printf("UDP packet contents: %s\n", incomingPacket);
+            Serial.printf("UDP packet contents: %s\n", incomingPacket);
             if (data.indexOf("gpio") != -1) {
                 DynamicJsonDocument doc(200);
                 deserializeJson(doc, data);
