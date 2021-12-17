@@ -97,9 +97,11 @@ void executeCmd() {
             }
             oldGpioData[i][0] = -1;
             oldGpioData[i][1] = -1;
+            Serial.println(" continue ");
             continue;
         }
         if (newGpioData[i][0] != oldGpioData[i][0]) { // 需要转变PWM模式
+            Serial.println(" change PWM ");
             pinMode(i, OUTPUT);
             if (newGpioData[i][0] == 0) { // 舵机
                 Servo servo;
@@ -108,11 +110,13 @@ void executeCmd() {
                 servoList[i] = servo;
             } else if (newGpioData[i][0] == 1) {  // PWM直驱
                 analogWrite(i, newGpioData[i][1] * 6);// 1024
+                Serial.println(" analogWrite  1 port:" + String(i) + " v:" + String(newGpioData[i][1] * 6));
             } else {
-                if(&servoList[i] != nullptr){
+                if (&servoList[i] != nullptr) {
                     servoList[i].detach();
                 }
-                digitalWrite(newGpioData[i][1],LOW);
+                digitalWrite(i, LOW);
+                Serial.println(" digitalWrite 1  LOW port:" + String(i) + " v:" + String(newGpioData[i][1] * 6));
             }
         } else { // 不需要转变PWM模式
             if (newGpioData[i][0] == 0) { // 舵机
@@ -120,10 +124,10 @@ void executeCmd() {
             } else if (newGpioData[i][0] == 1) {  // PWM直驱
                 analogWrite(i, newGpioData[i][1] * 6);// 1024
             } else {
-                if(&servoList[i] != nullptr){
+                if (&servoList[i] != nullptr) {
                     servoList[i].detach();
                 }
-                digitalWrite(newGpioData[i][1],LOW);
+                digitalWrite(i, LOW);
             }
         }
         oldGpioData[i][0] = newGpioData[i][0];
@@ -143,21 +147,28 @@ void loop() {
             // 自己发送放入广播 不处理
             return;
         }
-        int len = Udp.read(incomingPacket, 536); // 读取数据到incomingPacket
+        int len = Udp.read(incomingPacket, 600); // 读取数据到incomingPacket
         if (len > 0)                             // 如果正确读取
         {
             incomingPacket[len] = 0; //末尾补0结束字符串
             unsigned char count = 0;
+            unsigned char count2 = 0;
             for (int i = 0; i < len; ++i) {
                 if ((char) incomingPacket[i] == '{') {
                     count++;
                 }
+                if ((char) incomingPacket[i] == '{') {
+                    count2++;
+                }
+            }
+            if (count != count2) {
+                return;
             }
 //            Serial.printf("---count  %s\n", String(count).c_str());
             String data = String(incomingPacket);
             Serial.printf("UDP packet contents: %s\n", incomingPacket);
             if (data.indexOf("gpio") != -1) {
-                DynamicJsonDocument doc(200);
+                DynamicJsonDocument doc(600);
                 deserializeJson(doc, data);
                 int gpio = 0;
                 int pwmMode = 0;
