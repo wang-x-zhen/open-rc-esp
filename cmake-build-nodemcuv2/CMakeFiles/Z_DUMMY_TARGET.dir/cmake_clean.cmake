@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/OneWire/OneWire.cpp.obj"
   "CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
   "Z_DUMMY_TARGET"
+  "Z_DUMMY_TARGET.manifest"
   "Z_DUMMY_TARGET.pdb"
 )
 

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="SerialMonitorSettings" PortName="/dev/tty.usbserial-1410" BaudRate="115200" LineEndingsIndex="0" ShowStatusWidget="true" />
+  <component name="SerialMonitorSettings" PortName="COM4" BaudRate="115200" LineEndingsIndex="0" ShowStatusWidget="true" />
 </project>
