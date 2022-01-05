@@ -80,13 +80,13 @@ void sendIp() {
     if ((now - lastTimeSendIp) < 5000) {
         return;
     }
-    lastTimeSendIp = now;;
-    Udp.beginPacket(("" + String(WiFi.localIP()[0]) + "."+ String(WiFi.localIP()[1]) + "."+ String(WiFi.localIP()[2]) + ".255").c_str(), 18888);
+    lastTimeSendIp = now;
+    Udp.beginPacket("192.168.43.255", 18888);
 
     String data = "EspRcRx" + String(ESP.getChipId()) + ",ADC:" + String(ESP.getVcc());
     Udp.write(data.c_str());
     Udp.endPacket();
-    Serial.println("sendIp");
+//    Serial.println("sendIp");
 }
 
 void executeCmd() {

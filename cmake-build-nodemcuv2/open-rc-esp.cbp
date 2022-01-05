@@ -8,741 +8,739 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/make/open-rc-esp/cmake-build-nodemcuv2"/>
+				<Option working_dir="/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Production">
-				<Option working_dir="E:/make/open-rc-esp/cmake-build-nodemcuv2"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 Production"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="E:/make/open-rc-esp/cmake-build-nodemcuv2"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Debug">
-				<Option working_dir="E:/make/open-rc-esp/cmake-build-nodemcuv2"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 Debug"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Z_DUMMY_TARGET">
-				<Option output="E:/make/open-rc-esp/cmake-build-nodemcuv2/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/make/open-rc-esp/cmake-build-nodemcuv2"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="E:/make/open-rc-esp/include"/>
-					<Add directory="E:/make/open-rc-esp/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Servo/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
-					<Add directory="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src"/>
-					<Add directory="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/tools/sdk/include"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/tools/sdk/libc/xtensa-lx106-elf/include"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/tools/sdk/lwip2/include"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/variants/nodemcu"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266AVRISP/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPUpdateServer/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266LLMNR"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266NetBIOS"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SSDP"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SdFat/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFiMesh/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266httpUpdate/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Ethernet/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/GDBStub/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Hash/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/LittleFS/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SD/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SDFS/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SPI"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SPISlave/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SoftwareSerial/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/TFT_Touch_Shield_V2"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Wire"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/esp8266/src"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include/c++/4.8.2"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include/c++/4.8.2/xtensa-lx106-elf"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/lib/gcc/xtensa-lx106-elf/4.8.2/include"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/lib/gcc/xtensa-lx106-elf/4.8.2/include-fixed"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include"/>
-					<Add directory="/.platformio/packages/tool-unity"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
-					<Add directory="E:\Program Files (x86)\mingw64\include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Z_DUMMY_TARGET/fast">
-				<Option output="E:/make/open-rc-esp/cmake-build-nodemcuv2/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/make/open-rc-esp/cmake-build-nodemcuv2"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="E:/make/open-rc-esp/include"/>
-					<Add directory="E:/make/open-rc-esp/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Servo/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
-					<Add directory="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src"/>
-					<Add directory="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/tools/sdk/include"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/tools/sdk/libc/xtensa-lx106-elf/include"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/tools/sdk/lwip2/include"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/variants/nodemcu"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266AVRISP/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPUpdateServer/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266LLMNR"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266NetBIOS"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SSDP"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SdFat/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFiMesh/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266httpUpdate/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Ethernet/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/GDBStub/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Hash/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/LittleFS/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SD/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SDFS/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SPI"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SPISlave/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/SoftwareSerial/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/TFT_Touch_Shield_V2"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker/src"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/Wire"/>
-					<Add directory="/.platformio/packages/framework-arduinoespressif8266/libraries/esp8266/src"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include/c++/4.8.2"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include/c++/4.8.2/xtensa-lx106-elf"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/lib/gcc/xtensa-lx106-elf/4.8.2/include"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/lib/gcc/xtensa-lx106-elf/4.8.2/include-fixed"/>
-					<Add directory="/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include"/>
-					<Add directory="/.platformio/packages/tool-unity"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
-					<Add directory="E:\Program Files (x86)\mingw64\include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/make/open-rc-esp/cmake-build-nodemcuv2"/>
+				<Option working_dir="/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;E:/make/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET">
+				<Option output="/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/xxx/CLionProjects/open-rc-esp/include"/>
+					<Add directory="/Users/xxx/CLionProjects/open-rc-esp/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Servo/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+					<Add directory="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src"/>
+					<Add directory="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/tools/sdk/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/tools/sdk/libc/xtensa-lx106-elf/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/tools/sdk/lwip2/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/variants/nodemcu"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266AVRISP/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPUpdateServer/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266LLMNR"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266NetBIOS"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SSDP"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SdFat/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFiMesh/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266httpUpdate/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Ethernet/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/GDBStub/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Hash/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/LittleFS/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SD/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SDFS/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SPI"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SPISlave/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SoftwareSerial/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/TFT_Touch_Shield_V2"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Wire"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/esp8266/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include/c++/4.8.2"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include/c++/4.8.2/xtensa-lx106-elf"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/lib/gcc/xtensa-lx106-elf/4.8.2/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/lib/gcc/xtensa-lx106-elf/4.8.2/include-fixed"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/tool-unity"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET/fast">
+				<Option output="/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/xxx/CLionProjects/open-rc-esp/include"/>
+					<Add directory="/Users/xxx/CLionProjects/open-rc-esp/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Servo/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFi/src"/>
+					<Add directory="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src"/>
+					<Add directory="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/tools/sdk/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/tools/sdk/libc/xtensa-lx106-elf/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/cores/esp8266"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/tools/sdk/lwip2/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/variants/nodemcu"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ArduinoOTA"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/DNSServer/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/EEPROM"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266AVRISP/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPClient/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266HTTPUpdateServer/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266LLMNR"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266NetBIOS"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SSDP"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266SdFat/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WebServer/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266WiFiMesh/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266httpUpdate/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/ESP8266mDNS/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Ethernet/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/GDBStub/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Hash/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/LittleFS/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SD/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SDFS/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SPI"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SPISlave/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/SoftwareSerial/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/TFT_Touch_Shield_V2"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Ticker/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/Wire"/>
+					<Add directory="/Users/xxx/.platformio/packages/framework-arduinoespressif8266/libraries/esp8266/src"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include/c++/4.8.2"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include/c++/4.8.2/xtensa-lx106-elf"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/lib/gcc/xtensa-lx106-elf/4.8.2/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/lib/gcc/xtensa-lx106-elf/4.8.2/include-fixed"/>
+					<Add directory="/Users/xxx/.platformio/packages/toolchain-xtensa@2.40802.200502/xtensa-lx106-elf/include"/>
+					<Add directory="/Users/xxx/.platformio/packages/tool-unity"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Debug">
+				<Option working_dir="/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 Debug"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Production">
+				<Option working_dir="/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 Production"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.clang-format">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.clang-format">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.devcontainer/devcontainer.json">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.devcontainer/devcontainer.json">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.gitattributes">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.gitattributes">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.gitignore">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.gitignore">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.mbedignore">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.mbedignore">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.piopm">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.piopm">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.prettierignore">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/.prettierignore">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/ArduinoJson.h">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/ArduinoJson.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/CHANGELOG.md">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/CHANGELOG.md">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/CMakeLists.txt">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/CMakeLists.txt">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/CONTRIBUTING.md">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/CONTRIBUTING.md">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/LICENSE.md">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/LICENSE.md">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/README.md">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/README.md">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/SUPPORT.md">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/SUPPORT.md">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/appveyor.yml">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/appveyor.yml">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/banner.svg">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/banner.svg">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/component.mk">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/component.mk">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonConfigFile/JsonConfigFile.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonConfigFile/JsonConfigFile.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonFilterExample/JsonFilterExample.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonFilterExample/JsonFilterExample.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonGeneratorExample/JsonGeneratorExample.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonGeneratorExample/JsonGeneratorExample.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonHttpClient/JsonHttpClient.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonHttpClient/JsonHttpClient.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonParserExample/JsonParserExample.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonParserExample/JsonParserExample.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonServer/JsonServer.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonServer/JsonServer.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonUdpBeacon/JsonUdpBeacon.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/JsonUdpBeacon/JsonUdpBeacon.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/MsgPackParser/MsgPackParser.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/MsgPackParser/MsgPackParser.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/ProgmemExample/ProgmemExample.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/ProgmemExample/ProgmemExample.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/StringExample/StringExample.ino">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/examples/StringExample/StringExample.ino">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/keywords.txt">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/keywords.txt">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/library.json">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/library.json">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/library.properties">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/library.properties">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson.h">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayFunctions.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayFunctions.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayImpl.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayImpl.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayIterator.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayIterator.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayRef.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayRef.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayShortcuts.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ArrayShortcuts.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ElementProxy.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/ElementProxy.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/Utilities.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Array/Utilities.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Collection/CollectionData.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Collection/CollectionData.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Collection/CollectionImpl.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Collection/CollectionImpl.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Configuration.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Configuration.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/DeserializationError.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/DeserializationError.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Filter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Filter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/NestingLimit.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/NestingLimit.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Reader.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Reader.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStreamReader.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStreamReader.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStringReader.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/ArduinoStringReader.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/FlashReader.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/FlashReader.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/IteratorReader.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/IteratorReader.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/RamReader.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/RamReader.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/StdStreamReader.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/StdStreamReader.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/VariantReader.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/Readers/VariantReader.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/deserialize.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Deserialization/deserialize.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Document/BasicJsonDocument.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Document/BasicJsonDocument.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Document/DynamicJsonDocument.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Document/DynamicJsonDocument.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Document/JsonDocument.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Document/JsonDocument.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Document/StaticJsonDocument.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Document/StaticJsonDocument.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/EscapeSequence.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/EscapeSequence.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/JsonDeserializer.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/JsonDeserializer.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/JsonSerializer.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/JsonSerializer.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/Latch.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/Latch.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/PrettyJsonSerializer.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/PrettyJsonSerializer.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/TextFormatter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/TextFormatter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/Utf16.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/Utf16.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/Utf8.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Json/Utf8.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Memory/Alignment.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Memory/Alignment.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Memory/MemoryPool.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Memory/MemoryPool.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Misc/SerializedValue.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Misc/SerializedValue.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Misc/Visitable.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Misc/Visitable.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackDeserializer.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackDeserializer.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackSerializer.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/MsgPack/MsgPackSerializer.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/MsgPack/endianess.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/MsgPack/endianess.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/MsgPack/ieee754.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/MsgPack/ieee754.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Namespace.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Namespace.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/Float.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/Float.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/FloatParts.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/FloatParts.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/FloatTraits.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/FloatTraits.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/Integer.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/Integer.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/arithmeticCompare.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/arithmeticCompare.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/convertNumber.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/convertNumber.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/parseNumber.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Numbers/parseNumber.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/MemberProxy.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/MemberProxy.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectFunctions.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectFunctions.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectImpl.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectImpl.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectIterator.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectIterator.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectRef.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectRef.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectShortcuts.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/ObjectShortcuts.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/Pair.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Object/Pair.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/alias_cast.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/alias_cast.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/assert.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/assert.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/attributes.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/attributes.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/ctype.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/ctype.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/integer.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/integer.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/limits.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/limits.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/math.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/math.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/mpl/max.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/mpl/max.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace_generic.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/pgmspace_generic.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/preprocessor.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/preprocessor.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/safe_strcmp.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/safe_strcmp.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/static_array.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/static_array.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/conditional.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/conditional.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/declval.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/declval.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/enable_if.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/enable_if.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/integral_constant.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/integral_constant.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_array.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_array.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_base_of.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_base_of.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_class.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_class.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_const.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_const.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_convertible.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_convertible.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_enum.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_enum.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_floating_point.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_floating_point.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_integral.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_integral.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_pointer.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_pointer.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_same.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_same.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_signed.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_signed.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_unsigned.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/is_unsigned.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_unsigned.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_unsigned.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_void.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/make_void.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_const.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_const.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_cv.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_cv.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_reference.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/remove_reference.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/type_identity.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/type_traits/type_identity.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/utility.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Polyfills/utility.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/CountingDecorator.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/CountingDecorator.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writer.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writer.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/ArduinoStringWriter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/ArduinoStringWriter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/DummyWriter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/DummyWriter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/PrintWriter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/PrintWriter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/StaticStringWriter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/StaticStringWriter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStreamWriter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStreamWriter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStringWriter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/Writers/StdStringWriter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/measure.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/measure.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/serialize.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Serialization/serialize.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/StringStorage/StringCopier.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/StringStorage/StringCopier.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/StringStorage/StringMover.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/StringStorage/StringMover.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/StringStorage/StringStorage.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/StringStorage/StringStorage.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/ArduinoStringAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/ArduinoStringAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/ConstRamStringAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/ConstRamStringAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/FlashStringAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/FlashStringAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/JsonStringAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/JsonStringAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/RamStringAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/RamStringAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedFlashStringAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedFlashStringAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedRamStringAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/SizedRamStringAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/StdStringAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/StdStringAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/StringViewAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/Adapters/StringViewAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/IsWriteableString.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/IsWriteableString.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/StoragePolicy.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/StoragePolicy.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/String.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/String.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/StringAdapter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/StringAdapter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/StringAdapters.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Strings/StringAdapters.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/Converter.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/Converter.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/ConverterImpl.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/ConverterImpl.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/SlotFunctions.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/SlotFunctions.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantCompare.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantCompare.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantContent.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantContent.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantData.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantData.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantFunctions.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantFunctions.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantImpl.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantImpl.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantOperators.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantOperators.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantRef.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantRef.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantShortcuts.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantShortcuts.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantSlot.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantSlot.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantTag.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantTag.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantTo.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/VariantTo.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/Visitor.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/Variant/Visitor.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/compatibility.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/compatibility.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/version.hpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/ArduinoJson/version.hpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/CMakeLists.txt">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/ArduinoJson/src/CMakeLists.txt">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/.piopm">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/.piopm">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/OneWire.cpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/OneWire.cpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/OneWire.h">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/OneWire.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/examples/DS18x20_Temperature/DS18x20_Temperature.pde">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/examples/DS18x20_Temperature/DS18x20_Temperature.pde">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/examples/DS2408_Switch/DS2408_Switch.pde">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/examples/DS2408_Switch/DS2408_Switch.pde">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/examples/DS250x_PROM/DS250x_PROM.pde">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/examples/DS250x_PROM/DS250x_PROM.pde">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/keywords.txt">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/keywords.txt">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/library.json">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/library.json">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/library.properties">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/library.properties">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/util/OneWire_direct_gpio.h">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/util/OneWire_direct_gpio.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/util/OneWire_direct_regtype.h">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/.pio/libdeps/nodemcuv2/OneWire/util/OneWire_direct_regtype.h">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/src/main.cpp">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/src/main.cpp">
 			<Option target="Z_DUMMY_TARGET"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/CMakeLists.txt">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="E:/make/open-rc-esp/CMakeListsPrivate.txt">
+		<Unit filename="/Users/xxx/CLionProjects/open-rc-esp/CMakeListsPrivate.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
