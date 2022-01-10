@@ -6,6 +6,10 @@
 ###根据芯片不同 
 请改动 platformio.ini文件里的 
 
+###3. mac/win 使用Clion 系统不同需要清空 cmake-build-nodemcuv2文件夹下的所有文件（cmake-build-nodemcuv2文件夹还需要保留），然后 Tools-> PlatformIO -> Re-init
+
+
+
 `board = esp8285` // esp8285
 or
 `board = nodemcuv2`  // ESP8266 
