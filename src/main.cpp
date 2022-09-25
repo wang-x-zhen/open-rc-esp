@@ -4,7 +4,7 @@
 #include <ArduinoJson.h>
 #include <WebOTA.h>
 
-const char *version = "1.0.2";
+const char *version = "1.0.3";
 const char *host = "ESP-OTA"; // Used for MDNS resolution
 const char *ssid = "OpenRc";     // 手机热点网络名称
 const char *password = "10241024"; // 手机热点网络密码
@@ -80,7 +80,7 @@ void sendIp() {
                      "." + String(WiFi.localIP()[1])
                      + "." + String(WiFi.localIP()[2]) + ".255").c_str(), 18888);
 
-    String data = "EspRcRx" + String(ESP.getChipId()) + ",ADC:" + String(ESP.getVcc());
+    String data = "EspRcRx" + String(ESP.getChipId()) + ",ADC:" + String(ESP.getVcc()) + ",Version:" + String(version);
     Udp.write(data.c_str());
     Udp.endPacket();
 //    Serial.println("sendIp");
@@ -155,7 +155,7 @@ void loop() {
                 if ((char) incomingPacket[i] == '{') {
                     count++;
                 }
-                if ((char) incomingPacket[i] == '{') {
+                if ((char) incomingPacket[i] == '}') {
                     count2++;
                 }
             }
@@ -165,16 +165,16 @@ void loop() {
 //            Serial.printf("---count  %s\n", String(count).c_str());
             String data = String(incomingPacket);
             Serial.printf("UDP packet contents: %s\n", incomingPacket);
-            if (data.indexOf("gpio") != -1) {
+            if (data.indexOf("g") != -1) {
                 DynamicJsonDocument doc(600);
                 deserializeJson(doc, data);
                 int gpio = 0;
                 int pwmMode = 0;
                 int value = 0;
                 for (int k = 0; k < count; k++) {
-                    gpio = doc[k]["gpio"];
-                    pwmMode = doc[k]["pwmMode"];
-                    value = doc[k]["value"];
+                    gpio = doc[k]["g"];
+                    pwmMode = doc[k]["p"];
+                    value = doc[k]["v"];
                     newGpioData[gpio][0] = pwmMode;
                     newGpioData[gpio][1] = value;
                 }
