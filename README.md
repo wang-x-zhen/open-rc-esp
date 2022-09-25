@@ -8,6 +8,8 @@
 
 ###3. mac/win 使用Clion 系统不同需要清空 cmake-build-nodemcuv2文件夹下的所有文件（cmake-build-nodemcuv2文件夹还需要保留），然后 Tools-> PlatformIO -> Re-init
 
+###4. WebOTA 直接通过wifi升级接收机固件 http://192.168.x.x:8080/webota
+
 
 
 `board = esp8285` // esp8285
