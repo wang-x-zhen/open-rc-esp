@@ -1,17 +1,17 @@
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h>
 #include <Servo.h>
-#include <ArduinoJson.h>
 #include <WebOTA.h>
 
-const char *version = "1.0.3";
+const char *version = "1.0.7-dev.2";
 const char *host = "ESP-OTA"; // Used for MDNS resolution
 const char *ssid = "OpenRc";     // 手机热点网络名称
 const char *password = "10241024"; // 手机热点网络密码
 ADC_MODE(ADC_VCC);
 WiFiUDP Udp;
 unsigned int localUdpPort = 12345;
-char incomingPacket[537];         // 接收缓冲区
+char incomingPacket[50];         // 接收缓冲区
+int len = 0;
 // 默认是0 设置为-1
 int oldGpioData[17][2] = {{-1, -1},
                           {-1, -1},
@@ -48,13 +48,15 @@ int newGpioData[17][2] = {{-1, -1},
                           {-1, -1},
                           {-1, -1},};
 Servo servoList[17];
-const int GPIO_COUNT = 9;
-int gpioList[GPIO_COUNT] = {16, 14, 12, 13, 1, 3, 5, 4, 2};
 
-void excuteCmd();
+void parseData();
 
 void setup() {
 
+//    for (int i = 0; i < 8; ++i) {
+//        pinMode(gpioMaxList[i], OUTPUT);
+//        digitalWrite(gpioMaxList[i], LOW);
+//    }
     Serial.begin(115200);
     Serial.println();
     IPAddress IP = WiFi.softAPIP();
@@ -145,41 +147,24 @@ void loop() {
             // 自己发送放入广播 不处理
             return;
         }
-        int len = Udp.read(incomingPacket, 600); // 读取数据到incomingPacket
+        len = Udp.read(incomingPacket, 50); // 读取数据到incomingPacket
         if (len > 0)                             // 如果正确读取
         {
-            incomingPacket[len] = 0; //末尾补0结束字符串
-            unsigned char count = 0;
-            unsigned char count2 = 0;
-            for (int i = 0; i < len; ++i) {
-                if ((char) incomingPacket[i] == '{') {
-                    count++;
-                }
-                if ((char) incomingPacket[i] == '}') {
-                    count2++;
-                }
-            }
-            if (count != count2) {
-                return;
-            }
-//            Serial.printf("---count  %s\n", String(count).c_str());
-            String data = String(incomingPacket);
-            Serial.printf("UDP packet contents: %s\n", incomingPacket);
-            if (data.indexOf("g") != -1) {
-                DynamicJsonDocument doc(600);
-                deserializeJson(doc, data);
-                int gpio = 0;
-                int pwmMode = 0;
-                int value = 0;
-                for (int k = 0; k < count; k++) {
-                    gpio = doc[k]["g"];
-                    pwmMode = doc[k]["p"];
-                    value = doc[k]["v"];
-                    newGpioData[gpio][0] = pwmMode;
-                    newGpioData[gpio][1] = value;
-                }
-                executeCmd();
-            }
+            parseData();
         }
     }
+}
+
+void parseData() {
+    for (int j = 0; j < len; j += 3) {
+        int gpio = 0;
+        int pwmMode = 0;
+        int value = 0;
+        gpio = incomingPacket[j];
+        value = incomingPacket[j + 1];
+        pwmMode = incomingPacket[j + 2];
+        newGpioData[gpio][0] = pwmMode;
+        newGpioData[gpio][1] = value;
+    }
+    executeCmd();
 }
