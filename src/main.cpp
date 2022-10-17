@@ -2,8 +2,10 @@
 #include <WiFiUdp.h>
 #include <Servo.h>
 #include <WebOTA.h>
+#include <WiFiClient.h>
+#include <WiFiServer.h>
 
-const char *version = "1.0.7-dev.2";
+const char *version = "1.0.7-dev.5";
 const char *host = "ESP-OTA"; // Used for MDNS resolution
 const char *ssid = "OpenRc";     // 手机热点网络名称
 const char *password = "10241024"; // 手机热点网络密码
@@ -11,6 +13,11 @@ ADC_MODE(ADC_VCC);
 WiFiUDP Udp;
 unsigned int localUdpPort = 12345;
 char incomingPacket[50];         // 接收缓冲区
+
+// TCP
+WiFiServer server(13026);    //创建server 端口号是13026
+WiFiClient serverClient;
+
 int len = 0;
 // 默认是0 设置为-1
 int oldGpioData[17][2] = {{-1, -1},
@@ -51,6 +58,8 @@ Servo servoList[17];
 
 void parseData();
 
+void parseDataTcp();
+
 void setup() {
 
 //    for (int i = 0; i < 8; ++i) {
@@ -65,8 +74,14 @@ void setup() {
     WiFi.setAutoConnect(true);
     init_wifi(ssid, password, host);
 
-    //以下开启UDP监听并打印输出信息
-    Udp.begin(localUdpPort);
+    // 以下开启UDP监听并打印输出信息
+    // Udp.begin(localUdpPort);
+
+    // TCP
+    server.begin();  //启动server
+    server.setNoDelay(true);//关闭小包合并包功能，不会延时发送数据
+
+
     Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
 }
 
@@ -134,23 +149,39 @@ void executeCmd() {
     }
 }
 
+uint8_t recvBytes[150];
+int recvBytesLength = 0;
 
 void loop() {
-    webota.handle();
+//    webota.handle();
     sendIp();
-    int packetSize = Udp.parsePacket(); //获取当前队首数据包长度
-    if (packetSize)                     // 有数据可用
-    {
-//        Serial.printf("Received %d bytes from %s, port %d\n", packetSize, Udp.remoteIP().toString().c_str(),
-//                      Udp.remotePort());
-        if (Udp.remoteIP().toString() == WiFi.localIP().toString()) {
-            // 自己发送放入广播 不处理
-            return;
+
+    if (server.hasClient()) {  //判断是否有新的client请求进来
+        if (!serverClient || !serverClient.connected()) {
+            if (serverClient) {
+                serverClient.stop();  //停止旧的的连接
+            }
         }
-        len = Udp.read(incomingPacket, 50); // 读取数据到incomingPacket
-        if (len > 0)                             // 如果正确读取
-        {
-            parseData();
+        serverClient = server.available();//分配最新的client
+        Serial.println("server.hasClient()");
+    }
+
+    // 检测client发过来的数据
+    if (serverClient && serverClient.connected()) {
+        if (serverClient.available()) {//判断指定客户端是否有可读数据
+            while (serverClient.available()) {
+                recvBytes[recvBytesLength] = serverClient.read();
+                if (recvBytesLength > 5 &&
+                    recvBytesLength % 3 == 1 &&
+                    recvBytes[recvBytesLength - 1] == 200 &&
+                    recvBytes[recvBytesLength] == 201) {
+                    parseDataTcp();
+                    recvBytesLength = 0;
+                } else {
+                    recvBytesLength++;
+                }
+            }
+
         }
     }
 }
@@ -163,6 +194,24 @@ void parseData() {
         gpio = incomingPacket[j];
         value = incomingPacket[j + 1];
         pwmMode = incomingPacket[j + 2];
+        newGpioData[gpio][0] = pwmMode;
+        newGpioData[gpio][1] = value;
+    }
+    executeCmd();
+}
+
+
+void parseDataTcp() {
+    for (int j = 0; j <= recvBytesLength - 2; j += 3) {
+        if (j + 2 > recvBytesLength - 2) {
+            break;
+        }
+        int gpio = 0;
+        int pwmMode = 0;
+        int value = 0;
+        gpio = recvBytes[j + 0];
+        value = recvBytes[j + 1];
+        pwmMode = recvBytes[j + 2];
         newGpioData[gpio][0] = pwmMode;
         newGpioData[gpio][1] = value;
     }
