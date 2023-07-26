@@ -1,174 +1,57 @@
+
+/*
+ Stepper Motor Control - speed control
+
+ This program drives a unipolar or bipolar stepper motor.
+ The motor is attached to digital pins 8 - 11 of the Arduino.
+ A potentiometer is connected to analog input 0.
+
+ The motor will rotate in a clockwise direction. The higher the potentiometer value,
+ the faster the motor speed. Because setSpeed() sets the delay between steps,
+ you may notice the motor is less responsive to changes in the sensor value at
+ low speeds.
+
+ Created 30 Nov. 2009
+ Modified 28 Oct 2010
+ by Tom Igoe
+
+ */
 #include <ESP8266WiFi.h>
-#include <WiFiUdp.h>
-#include <Servo.h>
-#include <WebOTA.h>
 
-const char *version = "1.0.8";
-const char *host = "ESP-OTA"; // Used for MDNS resolution
-const char *ssid = "OpenRc";     // 手机热点网络名称
-const char *password = "10241024"; // 手机热点网络密码
-ADC_MODE(ADC_VCC);
-WiFiUDP Udp;
-unsigned int localUdpPort = 12345;
-char incomingPacket[50];         // 接收缓冲区
-int len = 0;
-// 默认是0 设置为-1
-int oldGpioData[17][2] = {{-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},};
-int newGpioData[17][2] = {{-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},
-                          {-1, -1},};
-Servo servoList[17];
+#include <Stepper.h>
 
-void parseData();
+const int stepsPerRevolution = 200;  // change this to fit the number of steps per revolution
+// for your motor
+
+
+// initialize the stepper library on pins 8 through 11:
+Stepper stepper(stepsPerRevolution, D0, D1, D2, D3);
+
+int stepCount = 0;  // number of steps the motor has taken
 
 void setup() {
-
-//    for (int i = 0; i < 8; ++i) {
-//        pinMode(gpioMaxList[i], OUTPUT);
-//        digitalWrite(gpioMaxList[i], LOW);
-//    }
-    Serial.begin(115200);
-    Serial.println();
-    IPAddress IP = WiFi.softAPIP();
-    Serial.printf("version:%s", version);
-//    WiFi.softAP(ssid, password);
-    WiFi.setAutoConnect(true);
-    init_wifi(ssid, password, host);
-
-    // 以下开启UDP监听并打印输出信息
-    Udp.begin(localUdpPort);
-
-    Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
+    // nothing to do inside the setup
+    stepper.setSpeed(50);
 }
 
-long lastTimeSendIp = 0;
-
-void sendIp() {
-    long now = millis();
-    if ((now - lastTimeSendIp) < 5000) {
-        return;
-    }
-    lastTimeSendIp = now;
-    Udp.beginPacket(("" + String(WiFi.localIP()[0]) +
-                     "." + String(WiFi.localIP()[1])
-                     + "." + String(WiFi.localIP()[2]) + ".255").c_str(), 18888);
-
-    String data = "EspRcRx" + String(ESP.getChipId()) + ",ADC:" + String(ESP.getVcc()) + ",Version:" + String(version);
-    Udp.write(data.c_str());
-    Udp.endPacket();
-}
-
-void executeCmd() {
-    for (int i = 0; i < 17; ++i) {
-        if (newGpioData[i][0] == -1) {
-            if (oldGpioData[i][0] != -1) {
-                pinMode(i, INPUT);
-            }
-            oldGpioData[i][0] = -1;
-            oldGpioData[i][1] = -1;
-//            Serial.println(" continue ");
-            continue;
-        }
-        if (newGpioData[i][0] != oldGpioData[i][0]) { // 需要转变PWM模式
-//            Serial.println(" change PWM ");
-            pinMode(i, OUTPUT);
-            if (newGpioData[i][0] == 0) { // 舵机
-                Servo servo;
-                servo.attach(i);
-                servo.write(newGpioData[i][1]);
-                servoList[i] = servo;
-            } else if (newGpioData[i][0] == 1) {  // PWM直驱
-                analogWrite(i, newGpioData[i][1] * 6);// 1024
-//                Serial.println(" analogWrite  1 port:" + String(i) + " v:" + String(newGpioData[i][1] * 6));
-            } else {
-                if (&servoList[i] != nullptr) {
-                    servoList[i].detach();
-                }
-                digitalWrite(i, LOW);
-//                Serial.println(" digitalWrite 1  LOW port:" + String(i) + " v:" + String(newGpioData[i][1] * 6));
-            }
-        } else { // 不需要转变PWM模式
-            if (newGpioData[i][0] == 0) { // 舵机
-                servoList[i].write(newGpioData[i][1]);
-            } else if (newGpioData[i][0] == 1) {  // PWM直驱
-                analogWrite(i, newGpioData[i][1] * 6);// 1024
-            } else {
-                if (&servoList[i] != nullptr) {
-                    servoList[i].detach();
-                }
-                digitalWrite(i, LOW);
-            }
-        }
-        oldGpioData[i][0] = newGpioData[i][0];
-        oldGpioData[i][1] = newGpioData[i][1];
-    }
-}
+int x = 0;
 
 void loop() {
-    webota.handle();
-    sendIp();
-    int packetSize = Udp.parsePacket(); //获取当前队首数据包长度
-    if (packetSize)                     // 有数据可用
-    {
-        if (Udp.remoteIP().toString() == WiFi.localIP().toString()) {
-            // 自己发送放入广播 不处理
-            return;
-        }
-        len = Udp.read(incomingPacket, 50); // 读取数据到incomingPacket
-        if (len > 0)                             // 如果正确读取
-        {
-            parseData();
-        }
+
+//    myStepper.setSpeed(motorSpeed);
+//    // step 1/100 of a revolution:
+//    myStepper.step(stepsPerRevolution / 100);
+
+    if (x < 100) {
+        stepper.step(-2);
+
+    } else {
+        stepper.step(2);
+    }
+    x++;
+    if (x > 200) {
+        x = 0;
     }
 }
 
-void parseData() {
-    for (int j = 0; j < len; j += 3) {
-        if (j + 2 > len || j + 1 > len) {
-            break;
-        }
-        int gpio = 0;
-        int pwmMode = 0;
-        int value = 0;
-        if (incomingPacket[j]>16){
-            break;
-        }
-        gpio = incomingPacket[j];
-        value = incomingPacket[j + 1];
-        pwmMode = incomingPacket[j + 2];
-        newGpioData[gpio][0] = pwmMode;
-        newGpioData[gpio][1] = value;
-    }
-    executeCmd();
-}
 
