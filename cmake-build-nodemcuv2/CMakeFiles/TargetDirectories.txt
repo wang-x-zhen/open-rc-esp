@@ -1,5 +1,5 @@
-/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/rebuild_cache.dir
-/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/edit_cache.dir
-/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/Z_DUMMY_TARGET.dir
-/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/Debug.dir
-/Users/xxx/CLionProjects/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/Production.dir
+E:/make/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/Production.dir
+E:/make/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/edit_cache.dir
+E:/make/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/Debug.dir
+E:/make/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/Z_DUMMY_TARGET.dir
+E:/make/open-rc-esp/cmake-build-nodemcuv2/CMakeFiles/rebuild_cache.dir
