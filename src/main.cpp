@@ -3,6 +3,11 @@
 #include <Servo.h>
 #include <WebOTA.h>
 
+#define IN1 13
+#define IN2 12
+#define IN3 14
+#define IN4 16
+
 const char *version = "1.0.8";
 const char *host = "ESP-OTA"; // Used for MDNS resolution
 const char *ssid = "OpenRc";     // 手机热点网络名称
@@ -52,23 +57,72 @@ Servo servoList[17];
 void parseData();
 
 void setup() {
+    pinMode(IN1, OUTPUT);
+    pinMode(IN2, OUTPUT);
+    pinMode(IN3, OUTPUT);
+    pinMode(IN4, OUTPUT);
 
-//    for (int i = 0; i < 8; ++i) {
-//        pinMode(gpioMaxList[i], OUTPUT);
-//        digitalWrite(gpioMaxList[i], LOW);
-//    }
     Serial.begin(115200);
     Serial.println();
     IPAddress IP = WiFi.softAPIP();
     Serial.printf("version:%s", version);
 //    WiFi.softAP(ssid, password);
     WiFi.setAutoConnect(true);
-    init_wifi(ssid, password, host);
+//    init_wifi(ssid, password, host);
 
     // 以下开启UDP监听并打印输出信息
-    Udp.begin(localUdpPort);
+//    Udp.begin(localUdpPort);
 
-    Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
+//    Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
+}
+
+void setStep(int in1, int in2, int in3, int in4) {
+    digitalWrite(IN1, in1);
+    digitalWrite(IN2, in2);
+    digitalWrite(IN3, in3);
+    digitalWrite(IN4, in4);
+}
+
+//A  1 1 0 0 0 0 0 1
+//A- 0 0 0 1 1 1 0 0
+//B  0 1 1 1 0 0 0 0
+//B- 0 0 0 0 0 1 1 1
+void clockwise() {
+    setStep(1, 0, 0, 0); // 步进电机顺时针旋转一步
+    delay(1);
+    setStep(1, 0, 1, 0);
+    delay(1);
+    setStep(0, 0, 1, 0);
+    delay(1);
+    setStep(0, 1, 1, 0);
+    delay(1);
+    setStep(0, 1, 0, 0);
+    delay(1);
+    setStep(0, 1, 0, 1);
+    delay(1);
+    setStep(0, 0, 0, 1);
+    delay(1);
+    setStep(1, 0, 0, 1);
+    delay(1);
+}
+
+void counterclockwise() {
+    setStep(1, 0, 0, 1);
+    delay(1);
+    setStep(0, 0, 0, 1);
+    delay(1);
+    setStep(0, 1, 0, 1);
+    delay(1);
+    setStep(0, 1, 0, 0);
+    delay(1);
+    setStep(0, 0, 1, 0);
+    delay(1);
+    setStep(0, 0, 1, 0);
+    delay(1);
+    setStep(1, 0, 1, 0);
+    delay(1);
+    setStep(1, 0, 0, 0); // 步进电机顺时针旋转一步
+    delay(1);
 }
 
 long lastTimeSendIp = 0;
@@ -150,6 +204,20 @@ void loop() {
             parseData();
         }
     }
+
+    // 步进电机顺时针旋转
+    for (int i = 0; i < 100; ++i) {
+        clockwise();
+    }
+    setStep(0, 0, 0, 0);
+    delay(1000); // 延迟1秒
+
+    // 步进电机逆时针旋转
+    for (int i = 0; i < 100; ++i) {
+        counterclockwise();
+    }
+    setStep(0, 0, 0, 0);
+    delay(1000); // 延迟1秒
 }
 
 void parseData() {
@@ -160,7 +228,7 @@ void parseData() {
         int gpio = 0;
         int pwmMode = 0;
         int value = 0;
-        if (incomingPacket[j]>16){
+        if (incomingPacket[j] > 16) {
             break;
         }
         gpio = incomingPacket[j];
