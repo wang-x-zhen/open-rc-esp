@@ -8,6 +8,11 @@
 #define IN3 16
 #define IN4 13
 
+#define LED_RED 2
+#define LED_WHITE 15
+#define MOTO_A 4
+#define MOTO_B 5
+
 const char *version = "1.0.8";
 const char *host = "ESP-OTA"; // Used for MDNS resolution
 const char *ssid = "OpenRc";     // 手机热点网络名称
@@ -24,6 +29,10 @@ void setup() {
     pinMode(IN2, OUTPUT);
     pinMode(IN3, OUTPUT);
     pinMode(IN4, OUTPUT);
+    pinMode(LED_RED, OUTPUT);
+    pinMode(LED_WHITE, OUTPUT);
+    pinMode(MOTO_A, OUTPUT);
+    pinMode(MOTO_B, OUTPUT);
 
     Serial.begin(115200);
     Serial.println();
@@ -96,17 +105,19 @@ long lastTimeSendIp = 0;
 
 
 void loop() {
-
-    // 步进电机顺时针旋转
-    for (int i = 0; i < 50; ++i) {
-        clockwise();
-    }
     setStep(1,1,1,1);
-    delay(2000);
-//     步进电机逆时针旋转
-    for (int i = 0; i < 50; ++i) {
-        counterclockwise();
-    }
-    setStep(1,1,1,1);
-    delay(2000);
+    digitalWrite(LED_WHITE, LOW);
+    digitalWrite(LED_RED, LOW);
+    delay(1000);
+    digitalWrite(MOTO_A, HIGH);
+    digitalWrite(MOTO_B, LOW);
+    delay(1000);
+    digitalWrite(MOTO_A, HIGH);
+    digitalWrite(MOTO_B, HIGH);
+    delay(1000);
+    digitalWrite(MOTO_A, LOW);
+    digitalWrite(MOTO_B, HIGH);
+    delay(1000);
+    digitalWrite(MOTO_A, HIGH);
+    digitalWrite(MOTO_B, HIGH);
 }
