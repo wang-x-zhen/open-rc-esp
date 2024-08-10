@@ -5,8 +5,8 @@
 
 #define IN1 12
 #define IN2 14
-#define IN3 13
-#define IN4 16
+#define IN3 16
+#define IN4 13
 
 const char *version = "1.0.8";
 const char *host = "ESP-OTA"; // Used for MDNS resolution
@@ -104,7 +104,7 @@ void loop() {
     setStep(1,1,1,1);
     delay(2000);
 //     步进电机逆时针旋转
-    for (int i = 0; i < 80; ++i) {
+    for (int i = 0; i < 50; ++i) {
         counterclockwise();
     }
     setStep(1,1,1,1);
