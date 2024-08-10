@@ -36,17 +36,32 @@ void setup() {
 
     Serial.begin(115200);
     Serial.println();
-    IPAddress IP = WiFi.softAPIP();
     Serial.printf("version:%s", version);
-//    WiFi.softAP(ssid, password);
-    WiFi.enableAP(false);
-    WiFi.enableSTA(false);
-//    init_wifi(ssid, password, host);
+    WiFi.softAP(ssid, password);
+    WiFi.setAutoConnect(true);
+    init_wifi(ssid, password, host);
 
-    // 以下开启UDP监听并打印输出信息
-//    Udp.begin(localUdpPort);
+    //以下开启UDP监听并打印输出信息
+    Udp.begin(localUdpPort);
+    Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
 
-//    Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
+}
+long lastTimeSendIp = 0;
+
+void sendIp() {
+    long now = millis();
+    if ((now - lastTimeSendIp) < 5000) {
+        return;
+    }
+    lastTimeSendIp = now;
+    Udp.beginPacket(("" + String(WiFi.localIP()[0]) +
+                     "." + String(WiFi.localIP()[1])
+                     + "." + String(WiFi.localIP()[2]) + ".255").c_str(), 18888);
+
+    String data = "EspRcRx" + String(ESP.getChipId()) + ",ADC:" + String(ESP.getVcc()) + ",Version:" + String(version);
+    Udp.write(data.c_str());
+    Udp.endPacket();
+//    Serial.println("sendIp");
 }
 
 void setStep(int in1, int in2, int in3, int in4) {
@@ -101,23 +116,32 @@ void counterclockwise() {
     delay(speedTime);
 }
 
-long lastTimeSendIp = 0;
-
-
 void loop() {
+    sendIp();
+    // 步进电机顺时针旋转
+    for (int i = 0; i < 50; ++i) {
+        clockwise();
+    }
     setStep(1,1,1,1);
-    digitalWrite(LED_WHITE, LOW);
-    digitalWrite(LED_RED, LOW);
-    delay(1000);
-    digitalWrite(MOTO_A, HIGH);
-    digitalWrite(MOTO_B, LOW);
-    delay(1000);
-    digitalWrite(MOTO_A, HIGH);
-    digitalWrite(MOTO_B, HIGH);
-    delay(1000);
-    digitalWrite(MOTO_A, LOW);
-    digitalWrite(MOTO_B, HIGH);
-    delay(1000);
-    digitalWrite(MOTO_A, HIGH);
-    digitalWrite(MOTO_B, HIGH);
+    delay(2000);
+//     步进电机逆时针旋转
+    for (int i = 0; i < 50; ++i) {
+        counterclockwise();
+    }
+    setStep(1,1,1,1);
+    delay(2000);
+
+    int packetSize = Udp.parsePacket(); //获取当前队首数据包长度
+    if (packetSize)                     // 有数据可用
+    {
+        if (Udp.remoteIP().toString() == WiFi.localIP().toString()) {
+            // 自己发送放入广播 不处理
+            return;
+        }
+        len = Udp.read(incomingPacket, 50); // 读取数据到incomingPacket
+        if (len > 0)                             // 如果正确读取
+        {
+
+        }
+    }
 }
