@@ -22,30 +22,15 @@ WiFiUDP Udp;
 unsigned int localUdpPort = 12345;
 char incomingPacket[50];         // 接收缓冲区
 int len = 0;
+int CMD_LEN = 6;
+int direction = 24;
+int directionMax = 50;
+int directionCmd = 24;
+int motoCmd = 90;
+int lightRedCmd = 0;
+int lightWhiteCmd = 0;
 
 
-void setup() {
-    pinMode(IN1, OUTPUT);
-    pinMode(IN2, OUTPUT);
-    pinMode(IN3, OUTPUT);
-    pinMode(IN4, OUTPUT);
-    pinMode(LED_RED, OUTPUT);
-    pinMode(LED_WHITE, OUTPUT);
-    pinMode(MOTO_A, OUTPUT);
-    pinMode(MOTO_B, OUTPUT);
-
-    Serial.begin(115200);
-    Serial.println();
-    Serial.printf("version:%s", version);
-    WiFi.softAP(ssid, password);
-    WiFi.setAutoConnect(true);
-    init_wifi(ssid, password, host);
-
-    //以下开启UDP监听并打印输出信息
-    Udp.begin(localUdpPort);
-    Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
-
-}
 long lastTimeSendIp = 0;
 
 void sendIp() {
@@ -76,7 +61,9 @@ void setStep(int in1, int in2, int in3, int in4) {
 //A-      0     0     0     1     1     1     0     0
 //B       0     1     1     1     0     0     0     0
 //B-      0     0     0     0     0     1     1     1
-int speedTime = 1;
+int speedTime = 2;
+
+
 void clockwise() {
     setStep(0, 1, 1, 1);
     delay(speedTime);
@@ -116,21 +103,91 @@ void counterclockwise() {
     delay(speedTime);
 }
 
-void loop() {
-    sendIp();
-    // 步进电机顺时针旋转
-    for (int i = 0; i < 50; ++i) {
-        clockwise();
-    }
-    setStep(1,1,1,1);
-    delay(2000);
-//     步进电机逆时针旋转
-    for (int i = 0; i < 50; ++i) {
+void initDirection() {
+    for (int i = 0; i < directionMax; ++i) {
         counterclockwise();
     }
-    setStep(1,1,1,1);
-    delay(2000);
+    setStep(1, 1, 1, 1);
+    delay(1000);
+    for (int i = 0; i < directionMax / 2; ++i) {
+        clockwise();
+    }
+}
 
+void moveDirection() {
+    if (direction < directionCmd) {
+        clockwise();
+        direction++;
+    }
+    if (direction > directionCmd) {
+        counterclockwise();
+        direction--;
+    }
+}
+
+void moveMoto() {
+    if (motoCmd < 90) {
+        digitalWrite(MOTO_A, LOW);
+        analogWrite(MOTO_B, 90 - motoCmd);
+    } else if (motoCmd > 90) {
+        analogWrite(MOTO_A, motoCmd - 90);
+        digitalWrite(MOTO_B, LOW);
+    } else {
+        digitalWrite(MOTO_A, HIGH);
+        digitalWrite(MOTO_B, HIGH);
+    }
+}
+
+void lights() {
+    analogWrite(LED_WHITE, (int)(lightWhiteCmd * 1.4));
+    if (lightRedCmd == 180) {
+        if (millis() / 500 % 2 == 0) {
+            analogWrite(LED_RED, 90);
+        } else {
+            digitalWrite(LED_RED, LOW);
+        }
+    } else {
+        analogWrite(LED_RED, lightRedCmd * 2);
+    }
+
+}
+
+
+void setup() {
+    pinMode(IN1, OUTPUT);
+    pinMode(IN2, OUTPUT);
+    pinMode(IN3, OUTPUT);
+    pinMode(IN4, OUTPUT);
+    pinMode(LED_RED, OUTPUT);
+    pinMode(LED_WHITE, OUTPUT);
+    pinMode(MOTO_A, OUTPUT);
+    pinMode(MOTO_B, OUTPUT);
+
+    Serial.begin(115200);
+    Serial.println();
+    Serial.printf("version:%s", version);
+    WiFi.softAP(ssid, password);
+    WiFi.setAutoConnect(true);
+    init_wifi(ssid, password, host);
+
+    //以下开启UDP监听并打印输出信息
+    Udp.begin(localUdpPort);
+    Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
+    initDirection();
+}
+
+void parseCmd() {
+    directionCmd = (int) (incomingPacket[3] / 3.6);
+    motoCmd = incomingPacket[0];
+    lightWhiteCmd = incomingPacket[4];
+    lightRedCmd = incomingPacket[5];
+}
+
+void loop() {
+    sendIp();
+    moveDirection();
+    moveMoto();
+    lights();
     int packetSize = Udp.parsePacket(); //获取当前队首数据包长度
     if (packetSize)                     // 有数据可用
     {
@@ -139,9 +196,9 @@ void loop() {
             return;
         }
         len = Udp.read(incomingPacket, 50); // 读取数据到incomingPacket
-        if (len > 0)                             // 如果正确读取
+        if (len == CMD_LEN)                             // 如果正确读取
         {
-
+            parseCmd();
         }
     }
 }
