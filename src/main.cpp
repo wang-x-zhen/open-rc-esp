@@ -61,56 +61,95 @@ void setStep(int in1, int in2, int in3, int in4) {
 //A-      0     0     0     1     1     1     0     0
 //B       0     1     1     1     0     0     0     0
 //B-      0     0     0     0     0     1     1     1
-int speedTime = 2;
-
+int speedTime = 2000;
 
 void clockwise() {
     setStep(0, 1, 1, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(0, 1, 0, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 1, 0, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 0, 0, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 0, 1, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 0, 1, 0);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 1, 1, 0);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(0, 1, 1, 0);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
 }
 
 
 void counterclockwise() {
     setStep(0, 1, 1, 0);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 1, 1, 0);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 0, 1, 0);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 0, 1, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 0, 0, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(1, 1, 0, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(0, 1, 0, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
     setStep(0, 1, 1, 1);
-    delay(speedTime);
+    delayMicroseconds(speedTime);
+}
+
+
+void clockwise2() {
+    setStep(1, 0, 0, 0);
+    delayMicroseconds(speedTime);
+    setStep(1, 0, 1, 0);
+    delayMicroseconds(speedTime);
+    setStep(0, 0, 1, 0);
+    delayMicroseconds(speedTime);
+    setStep(0, 1, 1, 0);
+    delayMicroseconds(speedTime);
+    setStep(0, 1, 0, 0);
+    delayMicroseconds(speedTime);
+    setStep(0, 1, 0, 1);
+    delayMicroseconds(speedTime);
+    setStep(0, 0, 0, 1);
+    delayMicroseconds(speedTime);
+    setStep(1, 0, 0, 1);
+    delayMicroseconds(speedTime);
+}
+
+
+void counterclockwise2() {
+    setStep(1, 0, 0, 1);
+    delayMicroseconds(speedTime);
+    setStep(0, 0, 0, 1);
+    delayMicroseconds(speedTime);
+    setStep(0, 1, 0, 1);
+    delayMicroseconds(speedTime);
+    setStep(0, 1, 0, 0);
+    delayMicroseconds(speedTime);
+    setStep(0, 1, 1, 0);
+    delayMicroseconds(speedTime);
+    setStep(0, 0, 1, 0);
+    delayMicroseconds(speedTime);
+    setStep(1, 0, 1, 0);
+    delayMicroseconds(speedTime);
+    setStep(1, 0, 0, 0);
+    delayMicroseconds(speedTime);
 }
 
 void initDirection() {
     for (int i = 0; i < directionMax; ++i) {
-        counterclockwise();
+        clockwise();
     }
     setStep(1, 1, 1, 1);
     delay(1000);
     for (int i = 0; i < directionMax / 2; ++i) {
-        clockwise();
+        counterclockwise();
     }
 }
 
@@ -128,9 +167,9 @@ void moveDirection() {
 void moveMoto() {
     if (motoCmd < 90) {
         digitalWrite(MOTO_A, LOW);
-        analogWrite(MOTO_B, 90 - motoCmd);
+        analogWrite(MOTO_B, (int)((90 - motoCmd)*2.8));
     } else if (motoCmd > 90) {
-        analogWrite(MOTO_A, motoCmd - 90);
+        analogWrite(MOTO_A, (int)((motoCmd-90)*2.8));
         digitalWrite(MOTO_B, LOW);
     } else {
         digitalWrite(MOTO_A, HIGH);
@@ -152,6 +191,18 @@ void lights() {
 
 }
 
+void parseCmd() {
+    // 遍历数组中的每个字符
+    for (int i = 0; i < 6; i++) {
+        Serial.print(" ");
+        Serial.print((int)incomingPacket[i]);  // 打印对应的十进制ASCII值
+    }
+    directionCmd = (int) (incomingPacket[3] / 3.6);
+    motoCmd = incomingPacket[0];
+    lightWhiteCmd = incomingPacket[4];
+    lightRedCmd = incomingPacket[5];
+    Serial.printf("\ndirectionCmd:%d motoCmd:%d\n", directionCmd, motoCmd);
+}
 
 void setup() {
     pinMode(IN1, OUTPUT);
@@ -164,9 +215,7 @@ void setup() {
     pinMode(MOTO_B, OUTPUT);
 
     Serial.begin(115200);
-    Serial.println();
-    Serial.printf("version:%s", version);
-    WiFi.softAP(ssid, password);
+//    WiFi.softAP(ssid, password);
     WiFi.setAutoConnect(true);
     init_wifi(ssid, password, host);
 
@@ -174,13 +223,6 @@ void setup() {
     Udp.begin(localUdpPort);
     Serial.printf("Now listening at IP %s, UDP port %d\n", WiFi.localIP().toString().c_str(), localUdpPort);
     initDirection();
-}
-
-void parseCmd() {
-    directionCmd = (int) (incomingPacket[3] / 3.6);
-    motoCmd = incomingPacket[0];
-    lightWhiteCmd = incomingPacket[4];
-    lightRedCmd = incomingPacket[5];
 }
 
 void loop() {
